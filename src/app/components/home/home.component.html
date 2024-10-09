@@ -1,0 +1,64 @@
+<div>
+  <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwKxAkYO_JMTtB0gesT5TWqmAgn5Po4h8cbQ&s"
+    alt=""
+  />
+  <div class="card py-5 my-4 h-75 w-100">
+    <img
+      src="https://quotefancy.com/media/wallpaper/3840x2160/5283907-Cathy-Guisewite-Quote-My-mother-had-always-taught-me-to-write.jpg"
+      class="card-img-top"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ posts[0].title }}</h5>
+      <p class="card-text">
+        {{ posts[0].body }}
+      </p>
+      <a href="#" class="btn btn-primary">{{ posts[0].tags[0] }}</a>
+      <a href="#" class="btn btn-primary mx-5">{{ posts[0].tags[1] }}</a>
+      <a href="#" class="btn btn-primary">{{ posts[0].tags[2] }}</a>
+    </div>
+  </div>
+</div>
+<h2 class="fs-1 fw-bold text-bg-primary rounded-2">ARTICOLI DI OGGI</h2>
+<div class="d-flex gap-2">
+  <div class="card" style="width: 22rem">
+    <img src="https://picsum.photos/200/300" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ posts[numeroArticolo].title }}</h5>
+      <p class="card-text">
+        {{ posts[numeroArticolo].body }}
+      </p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{ posts[numeroArticolo].tags[0] }}</li>
+      <li class="list-group-item">{{ posts[numeroArticolo].tags[1] }}</li>
+      <li class="list-group-item">{{ posts[numeroArticolo].tags[2] }}</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+</div>
+<h2>panorama_vertical</h2>
+<div class="d-flex gap-2">
+  <div class="card" *ngFor="let item of posts">
+    <img src="https://picsum.photos/200/300" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ item.title }}</h5>
+      <p class="card-text">
+        {{ posts[numeroArticolo].body }}
+      </p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{ posts[numeroArticolo].tags[0] }}</li>
+      <li class="list-group-item">{{ posts[numeroArticolo].tags[1] }}</li>
+      <li class="list-group-item">{{ posts[numeroArticolo].tags[2] }}</li>
+    </ul>
+    <div class="card-body">
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>
+</div>
